@@ -1,0 +1,19 @@
+<!-- templates/clusters.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clustered News Articles</title>
+</head>
+<body>
+    <h1>Clustered News Articles</h1>
+    {% for cluster_id, articles in clusters.items() %}
+        <h2>Cluster {{ cluster_id }}</h2>
+        <ul>
+            {% for article in articles %}
+                <li>{{ article['heading'] }} - <a href="{{ article['link'] }}">Read more</a></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
