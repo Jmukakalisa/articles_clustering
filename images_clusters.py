@@ -3,7 +3,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-# Load the clustered images data
+# Load the clustered images data to the dataFrame
 clustered_df = pd.read_csv('clustered_images_data.csv')
 
 @app.route('/')
